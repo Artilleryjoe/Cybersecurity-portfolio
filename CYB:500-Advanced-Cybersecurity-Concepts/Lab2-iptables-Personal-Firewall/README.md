@@ -26,14 +26,14 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j DROP
 - Inserted a logging rule for ICMP packets on the same interface:
   ```bash
-   sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j LOG
+  sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j LOG
 - Tested ping again to confirm ICMP packets were blocked.
 - Displayed current iptables rules with line numbers:
   ```bash
   sudo iptables --line-numbers -nL
 - Saved current rules to a file:
- ```bash
- sudo iptables-save > iptablesrules.txt
+  ```bash
+  sudo iptables-save > iptablesrules.txt
 - Viewed saved rules:
   ```bash
   sudo less iptablesrules.txt
@@ -42,8 +42,8 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   sudo iptables -F
 - Tested ping again to confirm connectivity was restored.
 - Restored rules from saved file:
-```bash
- sudo iptables-restore < iptablesrules.txt
+  ```bash
+   sudo iptables-restore < iptablesrules.txt
 
   ## Results
   - Successfully created a firewall that blocks ICMP traffic on interface ens192
