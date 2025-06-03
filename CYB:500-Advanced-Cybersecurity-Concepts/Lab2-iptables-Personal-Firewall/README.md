@@ -7,7 +7,7 @@ CYB/500: Advanced Cybersecurity Concepts
 This lab demonstrates how to use the `iptables` command to create packet-filtering rules and manage network traffic on a Linux system.
 
 ## Tools Used  
-- iptables command-line utility  
+- 'iptables' command-line utility  
 - Linux network interface (ens192 in this case)
 
 ## Procedure  
