@@ -16,11 +16,14 @@ This lab demonstrates how to identify and utilize search options in Metasploit t
   service postgresql start
 
 - Initialize the Metasploit database
-msfdb init
+  ```bash
+  msfdb init
 
 - Launch Metasploit console and display search help
-msfconsole
-search -h
+  ```bash
+  msfconsole
+  search -h
 
 - Search for a specific CVE within Metasploit
-search CVE-2013-2465
+  ```bash
+  search CVE-2013-2465
