@@ -12,8 +12,8 @@ This lab demonstrates how to identify and utilize search options in Metasploit t
 
 ## Procedure  
 - Start the PostgreSQL service required by Metasploit
-```bash
-service postgresql start
+  ```bash
+  service postgresql start
 
 - Initialize the Metasploit database
 msfdb init
