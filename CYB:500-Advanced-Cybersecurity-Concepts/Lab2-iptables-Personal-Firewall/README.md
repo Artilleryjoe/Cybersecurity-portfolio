@@ -11,7 +11,9 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
 - Linux network interface (ens192 in this case)
 
 ## Procedure  
-- Verified installation of iptables:  **sudo dpkg -l | grep iptab**
+- Verified installation of iptables:
+  ```bash
+  sudo dpkg -l | grep iptab
 - Checked IP address of network interfaces: **sudo ip addr**
 - Flushed existing iptables rules: **sudo iptables -F**
 - Tested network connectivity by pinging target IP (192.168.1.243).
