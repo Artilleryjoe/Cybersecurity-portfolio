@@ -4,11 +4,11 @@
 CYB/500: Advanced Cybersecurity Concepts
 
 ## Objective 
-This lab demonstrates how to perform a session hijacking using Burp Suite by intercetpting and managing a session token to manipulate authenenticaated sessions.
+This lab demonstrates how to perform a session hijacking using Burp Suite by intercepting and managing a session token to manipulate authenticated sessions.
 
 ## Tools Used
--Burp Suite
--Damn Vulnerable Web Application (DVWA)
+- Burp Suite
+- Damn Vulnerable Web Application (DVWA)
 - Firefox ESR
 
 ## Prodedure
