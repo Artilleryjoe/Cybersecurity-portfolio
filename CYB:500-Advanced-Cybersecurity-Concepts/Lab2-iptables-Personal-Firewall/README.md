@@ -35,8 +35,8 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
  ```bash
  sudo iptables-save > iptablesrules.txt
 - Viewed saved rules:
-```bash
-sudo less iptablesrules.txt
+  ```bash
+  sudo less iptablesrules.txt
 - Flushed rules to clear firewall:
 ```bash
 sudo iptables -F
