@@ -38,8 +38,8 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   ```bash
   sudo less iptablesrules.txt
 - Flushed rules to clear firewall:
-```bash
-sudo iptables -F
+  ```bash
+  sudo iptables -F
 - Tested ping again to confirm connectivity was restored.
 - Restored rules from saved file:
 ```bash
