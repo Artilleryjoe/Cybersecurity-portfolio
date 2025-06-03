@@ -45,12 +45,12 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   ```bash
    sudo iptables-restore < iptablesrules.txt
 
-  ## Results
+## Results
   - Successfully created a firewall that blocks ICMP traffic on interface ens192
   - Verified packet filtering by ping tests before and after rule insertion.
   - Demonstrated saving and restoring firewall rules using iptables-save and iptables-restore
     
-  ## Lessons Learned
+## Lessons Learned
   - iptables provides granular control over packet filtering on Linux systems.
   - Dropping and logging packets helps monitor and control network traffic.
   - Saving and restoring rules ensures persistence and ease of management.
