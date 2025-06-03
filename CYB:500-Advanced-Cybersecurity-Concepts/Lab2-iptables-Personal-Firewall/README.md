@@ -15,10 +15,10 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   ```bash
   sudo dpkg -l | grep iptab
 - Checked IP address of network interfaces:
-  '''bash
+  ```bash
   sudo ip addr
 - Flushed existing iptables rules:
-  '''bash
+  ```bash
   sudo iptables -F
 - Tested network connectivity by pinging target IP (192.168.1.243).
 - Inserted a rule to drop all ICMP packets on interface 'ens192': **sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j DROP**
