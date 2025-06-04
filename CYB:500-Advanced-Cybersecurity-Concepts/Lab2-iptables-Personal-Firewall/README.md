@@ -11,36 +11,36 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
 - Linux network interface (ens192 in this case)
 
 ## Procedure  
-- Verified installation of iptables:
+- Verify installation of iptables:
   ```bash
   sudo dpkg -l | grep iptab
-- Checked IP address of network interfaces:
+- Check IP address of network interfaces:
   ```bash
   sudo ip addr
-- Flushed existing iptables rules:
+- Flush existing iptables rules:
   ```bash
   sudo iptables -F
-- Tested network connectivity by pinging target IP (192.168.1.243).
-- Inserted a rule to drop all ICMP packets on interface ```ens192```:
+- Test network connectivity by pinging target IP (192.168.1.243).
+- Insert a rule to drop all ICMP packets on interface ```ens192```:
   ```bash
   sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j DROP
-- Inserted a logging rule for ICMP packets on the same interface:
+- Insert a logging rule for ICMP packets on the same interface:
   ```bash
   sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j LOG
-- Tested ping again to confirm ICMP packets were blocked.
-- Displayed current iptables rules with line numbers:
+- Test ping again to confirm ICMP packets were blocked.
+- Display current iptables rules with line numbers:
   ```bash
   sudo iptables --line-numbers -nL
-- Saved current rules to a file:
+- Save current rules to a file:
   ```bash
   sudo iptables-save > iptablesrules.txt
-- Viewed saved rules:
+- View saved rules:
   ```bash
   sudo less iptablesrules.txt
-- Flushed rules to clear firewall:
+- Flush rules to clear firewall:
   ```bash
   sudo iptables -F
-- Tested ping again to confirm connectivity was restored.
+- Test ping again to confirm connectivity was restored.
 - Restored rules from saved file:
   ```bash
    sudo iptables-restore < iptablesrules.txt
