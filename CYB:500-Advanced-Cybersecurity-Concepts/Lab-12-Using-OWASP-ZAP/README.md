@@ -34,7 +34,7 @@ This lab demonstrates how to use OWASP ZAP to conduct web application vulnerabil
   - Add payload > OK
   - Start the Fuzzer
 - Once complete, save Raw request:
-  ```Save > Request > Header > Filename:``` ```cracked```
+  ```Save > Request > Header > Filename: cracked```
    
 ## Results
 - OWASP ZAP was successfully used to intercept DVWA login requests.
