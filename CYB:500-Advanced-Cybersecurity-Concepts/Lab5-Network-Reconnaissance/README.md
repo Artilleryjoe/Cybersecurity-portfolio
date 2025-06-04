@@ -10,13 +10,13 @@ This lab demonstrates how to perform reconnaissance on a network to test potenti
 - nmap (Network Mapper)
 
 ## Procedure  
-- Launched nmap to check available options:  
+- Launch nmap to check available options:  
   ```bash
   nmap
-- Performed a ping scan to discover active hosts in a subnet:
+- Perform a ping scan to discover active hosts in a subnet:
   ```bash
   nmap -sn 10.0.0.1/24
-- Ran an OS detection scan with verbose output on a specific target:
+- Run an OS detection scan with verbose output on a specific target:
   ```bash
   nmap -O -v 10.0.0.1
   
