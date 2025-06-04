@@ -21,7 +21,7 @@ This lab demonstrates how to use the `iptables` command to create packet-filteri
   ```bash
   sudo iptables -F
 - Tested network connectivity by pinging target IP (192.168.1.243).
-- Inserted a rule to drop all ICMP packets on interface 'ens192':
+- Inserted a rule to drop all ICMP packets on interface ```ens192```:
   ```bash
   sudo iptables -I INPUT -i ens192 -p icmp -s 0/0 -d 0/0 -j DROP
 - Inserted a logging rule for ICMP packets on the same interface:
