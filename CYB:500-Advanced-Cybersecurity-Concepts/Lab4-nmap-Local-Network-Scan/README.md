@@ -10,12 +10,12 @@ This lab demonstrates how to scan the local network by probing the target system
 - `nmap` (Network Mapper)
 
 ## Procedure  
-- Pinged the target IP to verify connectivity:
+- Ping the target IP to verify connectivity:
   ```bash
   ping 192.168.56.101
   ```
-- Stopped the ping command (Ctrl+C).  
-- Ran an `nmap` scan with verbosity, OS detection, version detection, and script scanning:
+- Stop the ping command (Ctrl+C).  
+- Run an `nmap` scan with verbosity, OS detection, version detection, and script scanning:
   ```bash
   nmap -v -A -sV 192.168.56.101
   ```
