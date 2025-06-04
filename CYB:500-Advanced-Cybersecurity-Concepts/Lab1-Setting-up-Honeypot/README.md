@@ -11,12 +11,19 @@ Demonstrate how to set up a honeypot on Kali Linux to detect and trap malicious 
 - Pentbox honeypot tool (pentbox-1.8)
 
 ## Procedure  
-- Checked IP address using `ifconfig`, identified address as **192.168.122.1**.  
-- Navigated to the Pentbox directory: `cd pentbox-1.8/`.  
-- Launched Pentbox honeypot with the command: `./pentbox.rb - 2/3/2 port 443`.  
-- Configured a false message for intruders: **"Caught you!"**.  
-- Saved intrusion logs to `/pentbox/other/log_honeypot.txt`.  
-- Accessed the honeypot via IP address to simulate interaction.
+- Check IP address using:
+-   ```bash
+    ifconfig
+- Identify address as **192.168.122.1**.  
+- Navigate to the Pentbox directory:
+- ```bash
+  cd pentbox-1.8/
+- Launch Pentbox honeypot with the command:
+  ```bash
+  ./pentbox.rb - 2/3/2 port 443 
+- Configure a false message for intruders: **"Caught you!"**.  
+- Save intrusion logs to ```/pentbox/other/log_honeypot.txt```.  
+- Access the honeypot via IP address to simulate interaction.
 
 ## Results  
 - The honeypot successfully detected and logged intrusion attempts on port 443.  
