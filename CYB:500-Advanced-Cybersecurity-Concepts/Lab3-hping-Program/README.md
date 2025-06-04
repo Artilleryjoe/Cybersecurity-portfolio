@@ -11,8 +11,8 @@ This lab demonstrates how to use the `hping3` program to send SYN packets to a t
 - Linux terminal environment
 
 ## Procedure  
-- Launched a terminal in Kali Linux.  
-- Used the `hping3` tool to send 4 SYN packets to port 80 of a target host:
+- Launch a terminal in Kali Linux.  
+- Use the `hping3` tool to send 4 SYN packets to port 80 of a target host:
   ```bash
   hping3 -c 4 -p 80 192.168.122.7
   ```
