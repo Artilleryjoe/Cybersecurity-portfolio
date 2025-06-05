@@ -7,7 +7,7 @@ CYB/500: Advanced Cybersecurity Concepts
 This lab demonstrates how to scan the local network by probing the target system’s ports to identify which are open and gather information about services.
 
 ## Tools Used  
-- `nmap` (Network Mapper)
+- nmap (Network Mapper)
 
 ## Procedure  
 - Ping the target IP to verify connectivity:
