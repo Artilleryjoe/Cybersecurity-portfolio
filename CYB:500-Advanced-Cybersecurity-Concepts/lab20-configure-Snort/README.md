@@ -28,7 +28,7 @@ This lab demonstrates how to configure Snort as a network intrusion detection sy
 - Create a custom rule file:
   ```bash
   sudo nano /etc/snort/rules/local.rules
-- Add a simple rule (e.g.,ICMP alert)
+- Add a simple rule (e.g.,ICMP alert):
   ```alert icmp any any -> any any (msg:"ICMP Packet Detected"; sid:1000001; rev:1;)
 - Include the rule file in ```snort.conf```:
   ```bash
