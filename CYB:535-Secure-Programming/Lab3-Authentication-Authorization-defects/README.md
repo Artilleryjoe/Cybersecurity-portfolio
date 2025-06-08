@@ -50,17 +50,17 @@ This lab demonstrates how to identify and remediate common authentication and au
     ```python
     from flask import session, redirect
 
-app.secret_key = 'replace_this'
-
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form.get('username')
-    password = request.form.get('password')
-    if username in users and users[username]['password'] == password:
-        session['username'] = username
-        session['role'] = users[username]['role']
-        return f"Logged in as {username}"
-    return "Invalid credentials", 401
+    app.secret_key = 'replace_this'
+    
+    @app.route('/login', methods=['POST'])
+    def login():
+        username = request.form.get('username')
+        password = request.form.get('password')
+        if username in users and users[username]['password'] == password:
+            session['username'] = username
+            session['role'] = users[username]['role']
+            return f"Logged in as {username}"
+        return "Invalid credentials", 401
 
 @app.route('/admin')
 def admin_area():
