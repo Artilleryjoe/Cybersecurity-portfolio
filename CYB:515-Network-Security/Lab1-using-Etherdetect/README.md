@@ -6,8 +6,6 @@ CYB/510 – Enterprise Network Security
 ## Objective  
 This lab demonstrates how to use EtherDetect to capture and analyze network packets in a Windows environment. The goal is to observe how network protocols transmit data and how sensitive information may be exposed over unsecured connections.
 
-**Note:** This lab was conducted on a private, isolated test network. No real user traffic was monitored.
-
 ## Tools Used  
 - EtherDetect Packet Sniffer (Windows)  
 - Windows 10 virtual machine  
