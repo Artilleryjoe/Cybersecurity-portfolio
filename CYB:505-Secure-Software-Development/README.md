@@ -53,10 +53,15 @@ This project is managed like a secure documentation platform that must remain pr
 
  **File and folder structure:**
   Cybersecurity-portfolio/
+  
 ├── CYB-500_Advanced_Cybersecurity_Concepts/
+
 │ └── README.md
+
 ├── CYB-505_Secure_Software_Development/
+
 │ └── README.md
+
 └── README.md
 - Standard Markdown template for labs:
 - Title
