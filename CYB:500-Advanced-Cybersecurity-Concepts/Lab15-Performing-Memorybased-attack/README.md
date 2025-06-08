@@ -43,20 +43,20 @@ Run the program with ./bof
 Enter input that exceeds the 10-character buffer size to observe stack corruption
 Example: Inputting AAAAAAAAAAAAA shows how nextvar is affected by buffer overflow
 
-Results
-Normal input results in expected behavior:
+## Results
+-Normal input results in expected behavior:
   ```pgsql
-Enter your name: Alice  
-Your name is Alice  
-Next memory location contains: [ ]
-Overflow input (ABCDEFGHIJKL):
+  ```Enter your name: Alice  
+  Your name is Alice  
+  Next memory location contains: [ ]
+  Overflow input (ABCDEFGHIJKL):```
 
-```pgsql
-Your name is ABCDEFGHIJKL  
-Next memory location contains: [ L ]
-This demonstrates that excess characters written to name overflow into nextvar, confirming a stack-based buffer overflow vulnerability.
+  ```pgsql
+  ```Your name is ABCDEFGHIJKL  
+  Next memory location contains: [ L ]
+  This demonstrates that excess characters written to name overflow into nextvar,   confirming a stack-based buffer overflow vulnerability.```
 
-Lessons Learned
+## Lessons Learned
 - Even small C programs can contain serious vulnerabilities when memory management isn't handled properly.
 - Buffer overflows are a common entry point for memory-based attacks and emphasize the need for secure coding practices (e.g., bounds checking).
 - Exploiting this type of bug in real-world software could lead to arbitrary code execution, data leakage, or system crashes.
