@@ -59,16 +59,16 @@ Demonstrate a basic memory-based (buffer overflow) attack by overflowing a chara
 
 ## Results
 
-Normal input:
+- Normal input:
 
-  ```Enter your name: Alice  
-  Your name is Alice  
-  Next memory location contains: [ ]```
+      ```Enter your name: Alice  
+      Your name is Alice  
+      Next memory location contains: [ ]```
 
-Overflow input:
-  ```Enter your name: ABCDEFGHIJKL  
-  Your name is ABCDEFGHIJKL  
-  Next memory location contains: [ L ]```
+- Overflow input:
+      ```Enter your name: ABCDEFGHIJKL  
+      Your name is ABCDEFGHIJKL  
+      Next memory location contains: [ L ]```
 
 ## Lessons Learned
 
