@@ -33,7 +33,8 @@ This lab demonstrates how a keylogger can be installed and used to capture keyst
 - Save the script as keylogger.py and run it with:
     ```bash
     python keylogger.py
-    Begin typing into any application (Notepad, browser, etc.)
+
+- Begin typing into any application (Notepad, browser, etc.)
 
 Stop the script and open keylog.txt to view captured keystrokes
 
