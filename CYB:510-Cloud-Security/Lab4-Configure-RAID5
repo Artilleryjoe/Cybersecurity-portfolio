@@ -1,0 +1,30 @@
+# Configuring RAID 5
+
+## Course  
+CYB/510 – Enterprise Network Security
+
+## Objective  
+This lab demonstrates how to configure a RAID 5 array using multiple virtual disks on a Linux system. RAID 5 provides fault tolerance by distributing parity information across all disks, allowing data recovery in the event of a single drive failure.
+
+## Tools Used  
+- Linux OS (Ubuntu or Debian-based)  
+- `mdadm` (multi-disk administration tool)  
+- At least 3 attached virtual disks  
+- Terminal access with `sudo` privileges
+
+## Procedure  
+
+- Install `mdadm` if not already available:
+  ```bash
+  sudo apt update
+  sudo apt install mdadm
+- Identify available disks using lsblk or fdisk -l. Ensure you have at least 3 unused disks (e.g., /dev/sdb, /dev/sdc, /dev/sdd).
+
+Create the RAID 5 array:
+-
+-
+-
+-
+-
+-
+-
