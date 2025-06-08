@@ -16,23 +16,42 @@ Demonstrate a basic memory-based (buffer overflow) attack by overflowing a chara
 - Open it: `nano bof.c`  
 - Enter the following code:
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
+# Lab 15: Performing a Memory-Based Attack
 
-int main(int argc, char *argv[]) {
-    char name[10] = "";
-    char nextvar[10] = "";
+## Course  
+CYB/500: Advanced Cybersecurity Concepts
 
-    printf("-----------------\n");
-    printf("Enter your name: ");
-    scanf("%s", name);
+## Objective  
+Demonstrate a basic memory-based (buffer overflow) attack by overflowing a character array in a simple C program.
 
-    printf("Your name is %s\n", name);
-    printf("Next memory location contains: [ %s ]\n", nextvar);
+## Tools Used  
+- GCC (GNU Compiler Collection)  
+- Linux Terminal  
+- C programming
 
-    return 0;
-}
+## Procedure  
+- Create a new file: `touch bof.c`  
+- Open it: `nano bof.c`  
+- Enter the following code:
+
+    ````c
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main(int argc, char *argv[]) {
+        char name[10] = "";
+        char nextvar[10] = "";
+
+        printf("-----------------\n");
+        printf("Enter your name: ");
+        scanf("%s", name);
+    
+        printf("Your name is %s\n", name);
+        printf("Next memory location contains: [ %s ]\n", nextvar);
+    
+        return 0;
+    }
+
 
 - Compile: `gcc -o bof bof.c`
 - Run: `./bof`
