@@ -1,40 +1,37 @@
 # CYB/500 – Advanced Cybersecurity Concepts
 
-Welcome to the lab portfolio for **CYB/500: Advanced Cybersecurity Concepts**. This course focused on applied cybersecurity skills including network defense, cryptographic operations, vulnerability assessment, penetration testing techniques, and incident response.
+Welcome to the lab portfolio for CYB/500: Advanced Cybersecurity Concepts. This course explored core topics in cybersecurity, including intrusion detection, secure system configuration, cryptographic practices, network-based attacks, and malware analysis.
 
-Each lab documents tools used, commands executed, observed results, and key lessons learned. The goal of this collection is to showcase real-world cybersecurity operations in a structured, professional format.
-
----
+Each lab below documents hands-on experience using industry tools and real-world techniques.
 
 ## Labs Completed
 
-| Lab # | Title                                                       | Description |
-|-------|-------------------------------------------------------------|-------------|
-| 01    | Vulnerability Scanning Using OpenVAS                        | Scanning network targets with OpenVAS and analyzing results |
-| 02    | Performing a MITM Attack                                    | Intercepting traffic to demonstrate risks of unsecured protocols |
-| 03    | Making Syslog Entries Readable                              | Analyzing and improving syslog formatting for clarity |
-| 04    | Performing a Memory-Based Attack                            | Demonstrating buffer overflow through stack manipulation |
-| 05    | Using MD5 Hash Algorithm                                    | Generating and verifying MD5 checksums for file integrity |
-| 06    | Analyzing APKs with Apktool                                 | Reverse engineering Android apps to examine structure and logic |
-| 07    | Enabling Logging for Audited Objects                        | Configuring object-level access auditing in Windows |
-| 08    | Examining Audited Events in Event Viewer                    | Interpreting Event IDs related to file and object access |
-| 09    | Configuring Snort                                           | Deploying a basic Snort IDS with custom rules |
-| 10    | Confirming Spoofing with Wireshark                          | Capturing and validating spoofed IP packets |
-| 11    | Attacking Website Using XSS (DVWA)                          | Using custom JavaScript payloads in a test vulnerable web app |
-| 12    | Encrypting and Decrypting with Kleopatra                    | Using OpenPGP key pairs to secure and decrypt messages |
-| 13    | Encrypting and Decrypting with AES                          | Using AES-256-CBC to protect files via command-line encryption |
-| 14    | Detecting Rootkits                                          | Using chkrootkit and rkhunter to scan for hidden malware |
-| 15–25 | Additional Labs                                             | Merged and accelerated coverage of network, cryptographic, and forensic techniques from remaining course modules |
+| Title                                                   | Description |
+|----------------------------------------------------------|-------------|
+| Vulnerability Scanning Using OpenVAS                    | Scanned targets using OpenVAS and analyzed vulnerabilities |
+| Performing a MITM Attack                                | Demonstrated man-in-the-middle attack to intercept network traffic |
+| Making Syslog Entries Readable                          | Improved log clarity for system visibility and auditing |
+| Performing a Memory-Based Attack                        | Created a buffer overflow in C to understand stack memory issues |
+| Using MD5 Hash Algorithm                                | Verified file integrity using winMD5 and checksum comparisons |
+| Analyzing APKs with Apktool                             | Decompiled Android apps to review code structure and permissions |
+| Enabling Logging for Audited Objects                    | Set audit policies in Windows to log object access events |
+| Examining Audited Events in Event Viewer                | Reviewed and filtered security logs to identify access attempts |
+| Configuring Snort                                       | Deployed Snort IDS with custom rules to detect ICMP traffic |
+| Confirming Spoofing with Wireshark                      | Captured and validated spoofed packets using packet analysis |
+| Attacking Website Using XSS (DVWA)                      | Crafted and tested XSS payloads in a safe web app environment |
+| Encrypting and Decrypting with Kleopatra                | Used OpenPGP key pairs to encrypt and decrypt messages securely |
+| Encrypting and Decrypting with AES                      | Used AES-256 to encrypt and decrypt files via OpenSSL |
+| Detecting Rootkits                                      | Scanned system with chkrootkit and rkhunter to detect stealth malware |
 
----
+## Key Skills Demonstrated
 
-## Course Takeaways
+- Network security: MITM, spoofing, packet analysis  
+- Cryptography: MD5, AES, OpenPGP (Kleopatra), hash validation  
+- Host-based security: Syslog auditing, file access monitoring  
+- Web security: XSS attacks using DVWA  
+- Malware analysis: APK decompilation, rootkit detection  
+- Intrusion detection: Custom Snort rule creation
 
-- Built practical skills in **packet analysis**, **host-based monitoring**, **network intrusion detection**, and **binary exploitation**
-- Gained hands-on experience with tools like **Wireshark, Snort, OpenVAS, Apktool, Kleopatra, OpenSSL, DVWA**, and **chkrootkit**
-- Documented every lab using professional GitHub Markdown formatting
-- Prepared a real-world portfolio suitable for cybersecurity job interviews and technical showcases
+## Repository Navigation
 
----
-
-**Back to Portfolio Root:** [Cybersecurity-portfolio (main repo)](../)
+Return to the main repository: [Cybersecurity-portfolio (main repo)](../)
