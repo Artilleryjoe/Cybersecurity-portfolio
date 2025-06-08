@@ -73,3 +73,7 @@ Demonstrate a basic memory-based (buffer overflow) attack by overflowing a chara
 
 ## Lessons Learned
 
+- Buffer overflows can overwrite adjacent memory and lead to serious vulnerabilities
+- Proper bounds checking is critical
+- Use safer functions like fgets instead of scanf
+- Tools like valgrind help catch memory issues early
