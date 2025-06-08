@@ -38,7 +38,7 @@ This lab demonstrates how a persisted (stored) cross-site scripting (XSS) attack
                   <textarea name="comment"></textarea>
                   <input type="submit" value="Submit">
               </form>
-          '''
+          
 
       @app.route('/admin')
       def admin_view():
