@@ -62,11 +62,11 @@ This lab demonstrates how to identify and remediate common authentication and au
             return f"Logged in as {username}"
         return "Invalid credentials", 401
 
-@app.route('/admin')
-def admin_area():
-    if session.get('role') != 'admin':
-        return redirect(url_for('login'))
-    return "Welcome to the admin panel."
+    @app.route('/admin')
+    def admin_area():
+        if session.get('role') != 'admin':
+            return redirect(url_for('login'))
+        return "Welcome to the admin panel."
     
 ## Results
 - Initially, anyone could access protected routes without authentication
