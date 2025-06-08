@@ -1,55 +1,63 @@
-# Creating a Virtual Machine and Installing Ubuntu Using Hyper-V Manager
+# Building an IPsec VPN
 
 ## Course  
 CYB/510 – Enterprise Network Security
 
 ## Objective  
-This lab demonstrates how to create a new virtual machine (VM) and install Ubuntu Linux using Hyper-V Manager. This forms the foundation for building secure, isolated virtual environments for enterprise network testing and simulation.
+This lab demonstrates how to configure an IPsec VPN tunnel to securely transmit data between two endpoints over an untrusted network. The focus is on confidentiality, integrity, and authenticity using a site-to-site VPN configuration.
 
 ## Tools Used  
-- Hyper-V Manager (Windows 10/11)  
-- Ubuntu ISO (e.g., Ubuntu 22.04 LTS)  
-- Host machine with virtualization enabled
+- Linux (Ubuntu/Debian-based)  
+- `strongSwan` IPsec VPN software  
+- Two virtual machines or cloud instances (on separate networks)  
+- Terminal access with `sudo` privileges
 
 ## Procedure  
 
-- Enable Hyper-V if not already active:
-  - Open "Turn Windows features on or off"
-  - Check "Hyper-V" and restart the system if prompted
-
-- Open Hyper-V Manager and create a new virtual machine:
-  - Click **New > Virtual Machine**
-  - Name the VM (e.g., `Ubuntu-Test-VM`)
-  - Assign memory (recommend 2048–4096 MB)
-  - Select virtual switch (default or external for internet access)
-  - Create a virtual hard disk (20 GB or more)
-  - Attach the Ubuntu ISO as a boot device
-
-- Start the VM to begin Ubuntu installation:
-  - Choose language and keyboard layout
-  - Select normal installation
-  - Create a user, password, and computer name
-  - Allow Ubuntu to handle disk partitioning
-  - Complete the installation and reboot when prompted
-
-- Post-installation:
-  - Log in and run updates:
+- Install strongSwan on both endpoints:
+  ```bash
+  sudo apt update
+  sudo apt install strongswan
+- Configure the IPsec settings on each host:
+  - Edit ```/etc/ipsec.conf```:
     ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-  - Optionally install `openssh-server` for remote access:
+    config setup
+      charondebug="ike 2, knl 2, cfg 2, net 2, esp 2, dmn 2,  mgr 2"
+
+    conn vpn-tunnel
+      auto=start
+      left=192.168.1.1        # Local IP
+      right=192.168.2.1       # Remote IP
+      leftid=@left
+      rightid=@right
+      authby=secret
+      ike=aes256-sha1-modp1024!
+      esp=aes256-sha1!
+      keyexchange=ikev2
+      type=tunnel
+      leftsubnet=192.168.1.0/24
+      rightsubnet=192.168.2.0/24
+- Add shared secrets to ```/etc/ipsec.secrets```:
     ```bash
-    sudo apt install openssh-server
-    ```
+    @left @right : PSK "MyStrongSecret"
+- Restart the IPsec service:
+    ```bash
+    sudo systemctl restart strongswan
+- Verify the VPN tunnel:
+    ```bash
+    ipsec statusall
+- Test secure communication:
+  - Ping from one subnet to the other
+  - Run ```tcpdump``` on both sides to confirm encrypted ESP packets
 
-## Results  
-- Virtual machine created successfully with allocated resources  
-- Ubuntu installed and running within Hyper-V  
-- Network connectivity confirmed via browser and ping  
-- System updated and ready for secure lab use
+## Results
+- IPsec tunnel successfully established between two isolated networks
+- StrongSwan encrypted traffic using AES-256 and SHA1 for integrity
+- Secure communication validated by successful ping and encrypted packet flow
+- Tunnel automatically re-established after restart or drop
 
-## Lessons Learned  
-- Hyper-V provides a reliable environment for Linux VM hosting directly within Windows  
-- Combining VM creation and OS installation streamlines lab setup  
-- Regular updates and snapshotting of VMs help ensure consistency across experiments  
-- Virtualization is an essential part of enterprise network design, testing, and security
+## Lessons Learned
+- IPsec provides strong encryption and is widely supported across enterprise networks
+- Configuration requires accurate IP mapping, authentication, and subnet planning
+- Tools like strongSwan make it possible to build secure site-to-site tunnels in virtual labs
+- VPN testing is a critical part of securing enterprise network boundaries
