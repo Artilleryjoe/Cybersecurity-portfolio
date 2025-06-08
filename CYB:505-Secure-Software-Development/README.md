@@ -51,7 +51,7 @@ This project is managed like a secure documentation platform that must remain pr
 
 ### 3. Design
 
-- File and folder structure:
+ ***File and folder structure:***
   Cybersecurity-portfolio/
 ├── CYB-500_Advanced_Cybersecurity_Concepts/
 │ └── README.md
