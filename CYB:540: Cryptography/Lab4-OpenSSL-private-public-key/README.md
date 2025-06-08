@@ -29,13 +29,13 @@ This lab demonstrates how to generate an RSA public/private key pair using OpenS
     openssl genpkey -aes256 -algorithm RSA -out private_key_secure.pem
 
 ## Results
-The private key is generated and saved as private_key.pem
-The corresponding public key is extracted as public_key.pem
-Keys are valid and readable in PEM format
-A secure version of the private key can be protected with encryption
+- The private key is generated and saved as private_key.pem
+- The corresponding public key is extracted as public_key.pem
+- Keys are valid and readable in PEM format
+- A secure version of the private key can be protected with encryption
 
 ## Lessons Learned
-RSA key pairs are essential to secure communications and identity verification
-The private key must be stored securely and never shared
-The public key can be freely distributed and used to verify or encrypt data
-OpenSSL provides a powerful, scriptable way to generate and manage cryptographic keys
+- RSA key pairs are essential to secure communications and identity verification
+- The private key must be stored securely and never shared
+- The public key can be freely distributed and used to verify or encrypt data
+- OpenSSL provides a powerful, scriptable way to generate and manage cryptographic keys
