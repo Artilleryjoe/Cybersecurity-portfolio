@@ -66,6 +66,7 @@ Demonstrate a basic memory-based (buffer overflow) attack by overflowing a chara
       Next memory location contains: [ ]```
 
 - Overflow input:
+  
       ```Enter your name: ABCDEFGHIJKL  
       Your name is ABCDEFGHIJKL  
       Next memory location contains: [ L ]```
