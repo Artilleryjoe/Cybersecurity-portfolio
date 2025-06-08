@@ -16,6 +16,7 @@ This lab demonstrates how a persisted (stored) cross-site scripting (XSS) attack
 ## Procedure  
 
 - Set up a simple Flask application with a basic comment form and admin viewer:
+  
       ```python
       from flask import Flask, request, render_template_string
       import sqlite3
