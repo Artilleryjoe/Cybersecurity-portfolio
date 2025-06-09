@@ -96,15 +96,6 @@ This portfolio is intended to:
 ## Ethics & Disclosure
 All penetration testing labs were conducted in isolated or ethical environments such as DVWA, Mutillidae, or virtual machines. No real-world systems were harmed, and all security measures comply with academic and legal standards.
 
----
-
-## Contact
-For collaboration, consulting, or employment opportunities, please visit:  
-**[sicherkatze.com](https://sicherkatze.com)**  
-Or reach out via [LinkedIn](https://www.linkedin.com/in/kristopher-mccoy) or GitHub.
-
----
-
 _\"May all vulnerabilities be discovered in the lab — before they are exploited in the wild.\"_
 
 **– Kristopher McCoy**
