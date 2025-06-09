@@ -65,14 +65,6 @@ This capstone project showcases how well-defined, proactive incident response st
 
 ---
 
-## Contact  
-**Kristopher McCoy**  
-📍 Berlin, Germany  
-📧 Kris@supertechsecure/consulting.de  
-🌐 [www.supertechsecure.de](http://www.supertechsecure.de)
-
----
-
 ## References  
 - W3Schools. SQL Injection Basics. https://www.w3schools.com/sql/sql_injection.asp  
 - Harpur, R. (2021). Cybersecurity Playbook. AllHandsOnTech.  
