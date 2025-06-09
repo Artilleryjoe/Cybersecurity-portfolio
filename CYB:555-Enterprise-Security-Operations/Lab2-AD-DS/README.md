@@ -23,34 +23,23 @@ This lab demonstrates how to install and configure Active Directory Domain Servi
   - Define root domain (e.g., `sicherheitsschaf.local`)  
   - Configure Directory Services Restore Mode (DSRM) password  
 - Validate installation with:
-  ```powershell
-  Get-WindowsFeature AD-Domain-Services
-and check domain health with:
+    ```powershell
+    Get-WindowsFeature AD-Domain-Services
+- Check domain health with:
+    ```powershell
+    dcdiag
 
-powershell
-Copy
-Edit
-dcdiag
-Results
-AD DS successfully installed and server promoted to Domain Controller
+## Results
+- AD DS successfully installed and server promoted to Domain Controller
+- Domain structure initialized with forest root: sicherheitsschaf.local
+- DNS integration and Group Policy Management verified
+- Initial organizational units and user accounts created
 
-Domain structure initialized with forest root: sicherheitsschaf.local
-
-DNS integration and Group Policy Management verified
-
-Initial organizational units and user accounts created
-
-Lessons Learned
-Active Directory is a foundational component in enterprise identity and access management (IAM)
-
-Proper planning of domain structure and naming conventions is essential for scalability
-
-Misconfigurations can result in privilege escalation, replication issues, or authentication failures
-
+## Lessons Learned
+- Active Directory is a foundational component in enterprise identity and access management (IAM)
+- Proper planning of domain structure and naming conventions is essential for scalability
+- Misconfigurations can result in privilege escalation, replication issues, or authentication failures
 Security best practices include:
-
-Tiered administration model
-
-Audit policies and logging
-
-Regular backup and restore validation
+  - Tiered administration model
+  - Audit policies and logging
+  - Regular backup and restore validation
