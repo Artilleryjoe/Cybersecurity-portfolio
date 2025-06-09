@@ -39,8 +39,8 @@ This lab demonstrates how to securely configure an OpenSSH server to allow encry
     ```bash
     sudo systemctl restart ssh
 - Open a remote terminal and connect:
-```bash
-ssh yourusername@your.server.ip -p 2222
+    ```bash
+    ssh yourusername@your.server.ip -p 2222
 - Monitor /var/log/auth.log for login attempts
 
 ## Results
