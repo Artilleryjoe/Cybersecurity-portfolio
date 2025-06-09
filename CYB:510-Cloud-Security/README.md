@@ -1,6 +1,6 @@
-# CYB/510 – Enterprise Network Security
+# CYB/510 – Cloud Security
 
-This folder contains labs completed for CYB/510: Enterprise Network Security. The course focused on securing enterprise systems through hands-on experience with virtualization, VPNs, intrusion detection, cryptographic tools, and network attack simulations.
+This folder contains labs completed for CYB/510: Cloud Security. The course focused on securing enterprise systems through hands-on experience with virtualization, VPNs, intrusion detection, cryptographic tools, and network attack simulations.
 
 All labs were conducted in a secure and controlled environment, and all offensive techniques were used strictly for academic and educational purposes.
 
