@@ -33,13 +33,10 @@ This lab demonstrates how to use `osquery` to monitor and investigate endpoint a
   - Tampered system files
 
 ## Results
-Discovered elevated PowerShell usage on a Linux host — flagged as anomaly
-
-Logged presence of a rogue service mimicking SSH
-
-Used query output to support a deeper investigation via additional forensic tools
-
-Scheduled osqueryd to monitor changes in /etc/passwd and login sessions
+- Discovered elevated PowerShell usage on a Linux host — flagged as anomaly
+- Logged presence of a rogue service mimicking SSH
+- Used query output to support a deeper investigation via additional forensic tools
+- Scheduled osqueryd to monitor changes in /etc/passwd and login sessions
 
 ## Lessons Learned
 - osquery bridges the gap between security operations and system administration
